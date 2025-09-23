@@ -8,30 +8,47 @@
   "SETTINGS_FETCH_ERROR": "Settings could not be fetched. Error:{err}",
   "SETTINGS_SCHEMA_INVALID": "Settings are not valid. Failed schema validation",
 
-  "POLLING_FETCH_SETTINGS_FAILED": "Error while fetching VWO settings with polling",
+  "SETTINGS_FETCH_ERROR_WITH_POLLING": "Error while fetching VWO settings with polling",
 
-  "API_THROW_ERROR": "API - {apiName} failed to execute. Trace:{err}",
+  "API_EXECUTION_FAILED": "API - {apiName} failed to execute. Trace:{err}",
   "API_INVALID_PARAM": "Key:{key} passed to API:{apiName} is not of valid type. Got type:{type}, should be:{correctType}",
-  "API_SETTING_INVALID": "Settings are not valid. Contact VWO Support",
   "API_CONTEXT_INVALID": "Context should be an object and must contain a mandatory key - id, which is User ID",
 
   "FEATURE_NOT_FOUND": "Feature not found for the key:{featureKey}",
+  "FEATURE_NOT_FOUND_WITH_ID": "Feature not found for the id:{featureId}",
   "EVENT_NOT_FOUND": "Event:{eventName} not found in any of the features' metrics",
 
-  "STORED_DATA_ERROR": "Error in getting data from storage. Error:{err}",
+  "GET_STORED_DATA_ERROR": "Error in getting data from storage. Error:{err}",
   "STORING_DATA_ERROR": "Key:{featureKey} is not valid. Not able to store data into storage",
 
   "GATEWAY_URL_ERROR": "Please provide a valid URL for VWO Gateway Service while initializing the SDK",
 
   "NETWORK_CALL_FAILED": "Error occurred while sending {method} request. Error:{err}",
-  "SETTINGS_FETCH_FAILED": "Failed to fetch settings and hence VWO client instance couldn't be updated when API: {apiName} got called having isViaWebhook param as {isViaWebhook}. Error: {err}",
+  "SETTINGS_FETCH_FAILED_WITH_POLLING": "Failed to fetch settings and hence VWO client instance couldn't be updated when API: {apiName} got called having isViaWebhook param as {isViaWebhook}. Error: {err}",
   "NETWORK_CALL_RETRY_ATTEMPT": "Request failed for {endPoint}, Error: {err}. Retrying in {delay} seconds, attempt {attempt} of {maxRetries}",
   "NETWORK_CALL_RETRY_FAILED": "Max retries reached. Request failed for {endPoint}, Error: {err}",
 
   "CONFIG_PARAMETER_INVALID": "{parameter} paased in {api} API is not correct. It should be of type:{type}}",
   "BATCH_QUEUE_EMPTY": "No batch queue present for account:{accountId} when calling flushEvents API. Check batchEvents config in launch API",
-  "RETRY_CONFIG_INVALID": "Retry config is invalid. Please check the VWO developer documentation. Current retry config: {retryConfig}",
-  "SDK_INIT_EVENT_FAILED": "Error occurred while sending SDK init event. Error:{err}",
-  "INVALID_NETWORK_RESPONSE_DATA": "Received invalid or empty response data from the network request",
-  "ALIAS_NOT_ENABLED" : "Aliasing is not enabled. Set isAliasingEnabled in init to enable aliasing"
+
+  "SET_SEGMENTATION_CONTEXT_ERROR": "Error in setting contextual data for segmentation. Got error: {err}",
+  "USER_AGENT_VALIDATION_ERROR": "Failed to validate user agent. Error: {err}",
+  "LOCATION_PRE_SEGMENT_REQUIRED_ERROR": "To evaluate location pre Segment, please pass ipAddress in context object",
+  "USER_AGENT_PRE_SEGMENT_REQUIRED_ERROR": "To evaluate user agent pre Segment, please pass userAgent in context object",
+  "INVALID_INIT_FORMAT": "Invalid inList operand format",
+  "GATEWAY_DATA_FETCH_ERROR": "Error while fetching data from gateway. Error: {err}",
+
+  "STORAGE_READ_ERROR": "Error while reading from storage. Error: {err}",
+  "STORAGE_WRITE_ERROR": "Error while writing to storage. Error: {err}",
+
+  "DECODE_SDK_KEY_ERROR": "Failed to decode sdkKey from storage. Error: {err}",
+  "INVALID_BATCH_EVENTS_CONFIG": "Invalid batch events config, should be an object, eventsPerRequest should be a number greater than 0 and requestTimeInterval should be a number greater than 0",
+
+  "ATTRIBUTES_MAP_ERROR": "Attributes map must contain atleast 1 key-value pair",
+  "ATTRIBUTES_MAP_INVALID": "Attributes should be an object containing key-value pairs",
+
+  "BATCHING_NOT_ENABLED": "Batching is not enabled. Pass batchEventData in the SDK configuration while invoking init API.",
+  "NETWORK_CALL_FAILURE_AFTER_MAX_RETRIES_FOR_V2_SETTINGS": "Network call to {endPoint} failed after {attempts} retry attempt(s). Error: {err}",
+  "NETWORK_CALL_FAILURE_AFTER_MAX_RETRIES_FOR_GET_FLAG": "Network call having experimentId:{experimentId}, variationId:{variationId} failed after {attempts} retry attempt(s). Got Error: {err}",
+  "NETWORK_CALL_FAILURE_AFTER_MAX_RETRIES": "Network call for {apiName} failed after {attempts} retry attempt(s). Got Error: {err}"
 }
