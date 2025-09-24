@@ -31,11 +31,8 @@
 
   "NETWORK_CALL_FAILED": "Error occurred while sending {method} request. Error:{err}",
   "ATTEMPTING_RETRY_FOR_FAILED_NETWORK_CALL": "Request failed for {endPoint}. Error: {err}. Retrying in {delay} seconds, attempt {attempt} of {maxRetries}",
-  "NETWORK_CALL_FAILED_AFTER_MAX_RETRIES": "Max retries reached. Request failed for {endPoint}. Error: {err}",
 
-  "NETWORK_CALL_FAILURE_AFTER_MAX_RETRIES_FOR_V2_SETTINGS": "Network call to {endPoint} failed after {attempts} retry attempt(s). Error: {err}.",
-  "NETWORK_CALL_FAILURE_AFTER_MAX_RETRIES_FOR_GET_FLAG": "Network call failed after {attempts} retry attempt(s).` Got Erro`r: {err}",
-  "NETWORK_CALL_FAILURE_AFTER_MAX_RETRIES": "Network call for {apiName} failed after {attempts} retry attempt(s). Got Error: {err}",
+  "NETWORK_CALL_FAILURE_AFTER_MAX_RETRIES": "Network call for {extraData} failed after {attempts} retry attempt(s). Got Error: {err}",
 
   "INVALID_RETRY_CONFIG": "Retry config is invalid. Should be of type:object",
   
