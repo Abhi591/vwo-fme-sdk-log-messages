@@ -1,58 +1,57 @@
 {
-  "INIT_OPTIONS_ERROR": "[ERROR]: VWO-SDK {date} Options should be of type object",
-  "INIT_OPTIONS_SDK_KEY_ERROR": "[ERROR]: VWO-SDK {date} Please provide the sdkKey in the options and should be a of type string",
-  "INIT_OPTIONS_ACCOUNT_ID_ERROR": "[ERROR]: VWO-SDK {date} Please provide VWO account ID in the options and should be a of type string|number",
+  "INVALID_OPTIONS": "Options should be of type:object",
+  "INVALID_SDK_KEY_IN_OPTIONS": "SDK Key is required in the options and should be of type:string",
+  "INVALID_ACCOUNT_ID_IN_OPTIONS": "Account ID is required in the options and should be of type:string|number",
 
-  "INIT_OPTIONS_INVALID": "Invalid key:{key} passed in options. Should be of type:{correctType} and greater than equal to 1000",
+  "INVALID_POLLING_CONFIGURATION": "Invalid key:{key} passed in options. Should be of type:{correctType} and greater than equal to 1000",
 
-  "SETTINGS_FETCH_ERROR": "Settings could not be fetched. Error:{err}",
-  "SETTINGS_SCHEMA_INVALID": "Settings are not valid. Failed schema validation",
+  "ERROR_FETCHING_SETTINGS": "Settings could not be fetched. Error:{err}",
+  "ERROR_FETCHING_SETTINGS_WITH_POLLING": "Settings could not be fetched with polling. Error:{err}",
+  "UPDATING_CLIENT_INSTANCE_FAILED_WHEN_WEBHOOK_TRIGGERED": "Failed to fetch settings. VWO client instance couldn't be updated. API:{apiName} called having isViaWebhook:{isViaWebhook}. Error: {err}",
+  
 
-  "SETTINGS_FETCH_ERROR_WITH_POLLING": "Error while fetching VWO settings with polling",
+  "INVALID_SETTINGS_SCHEMA": "Settings are not valid. Failed schema validation",
 
-  "API_EXECUTION_FAILED": "API - {apiName} failed to execute. Trace:{err}",
-  "API_INVALID_PARAM": "Key:{key} passed to API:{apiName} is not of valid type. Got type:{type}, should be:{correctType}",
-  "API_CONTEXT_INVALID": "Context should be an object and must contain a mandatory key - id, which is User ID",
+  "EXECUTION_FAILED": "API - {apiName} failed to execute. Error:{err}",
+  "INVALID_PARAM": "Key:{key} passed to API:{apiName} is not of valid type. Got type:{type}, should be:{correctType}",
+  "INVALID_CONTEXT_PASSED": "Context should be of type:object and must contain a mandatory key: id, which is User ID",
 
   "FEATURE_NOT_FOUND": "Feature not found for the key:{featureKey}",
   "FEATURE_NOT_FOUND_WITH_ID": "Feature not found for the id:{featureId}",
   "EVENT_NOT_FOUND": "Event:{eventName} not found in any of the features' metrics",
 
-  "GET_STORED_DATA_ERROR": "Error in getting data from storage. Error:{err}",
-  "STORING_DATA_ERROR": "Key:{featureKey} is not valid. Not able to store data into storage",
+  "ERROR_READING_STORED_DATA_IN_STORAGE": "Error reading data from storage. Error:{err}",
+  "ERROR_STORING_DATA_IN_STORAGE": "Key:{featureKey} is not valid. Unable to store data into storage",
 
-  "GATEWAY_URL_ERROR": "Please provide a valid URL for VWO Gateway Service while initializing the SDK",
+  "ERROR_READING_DATA_FROM_BROWSER_STORAGE": "Error while reading from browser storage. Error: {err}",
+  "ERROR_STORING_DATA_IN_BROWSER_STORAGE": "Error while writing to browserstorage. Error: {err}",
+  "ERROR_DECODING_SDK_KEY_FROM_STORAGE": "Failed to decode sdkKey from browser storage. Error: {err}",
+
+  "INVALID_GATEWAY_URL": "Invalid URL for VWO Gateway Service while initializing the SDK",
 
   "NETWORK_CALL_FAILED": "Error occurred while sending {method} request. Error:{err}",
-  "SETTINGS_FETCH_FAILED_WITH_POLLING": "Failed to fetch settings and hence VWO client instance couldn't be updated when API: {apiName} got called having isViaWebhook param as {isViaWebhook}. Error: {err}",
-  "NETWORK_CALL_RETRY_ATTEMPT": "Request failed for {endPoint}, Error: {err}. Retrying in {delay} seconds, attempt {attempt} of {maxRetries}",
-  "NETWORK_CALL_RETRY_FAILED": "Max retries reached. Request failed for {endPoint}, Error: {err}",
+  "ATTEMPTING_RETRY_FOR_FAILED_NETWORK_CALL": "Request failed for {endPoint}. Error: {err}. Retrying in {delay} seconds, attempt {attempt} of {maxRetries}",
+  "NETWORK_CALL_FAILED_AFTER_MAX_RETRIES": "Max retries reached. Request failed for {endPoint}. Error: {err}",
 
-  "CONFIG_PARAMETER_INVALID": "{parameter} paased in {api} API is not correct. It should be of type:{type}}",
-  "BATCH_QUEUE_EMPTY": "No batch queue present for account:{accountId} when calling flushEvents API. Check batchEvents config in launch API",
-  "RETRY_CONFIG_INVALID": "Retry config is invalid. Please check the VWO developer documentation. Current retry config: {retryConfig}",
+  "NETWORK_CALL_FAILURE_AFTER_MAX_RETRIES_FOR_V2_SETTINGS": "Network call to {endPoint} failed after {attempts} retry attempt(s). Error: {err}.",
+  "NETWORK_CALL_FAILURE_AFTER_MAX_RETRIES_FOR_GET_FLAG": "Network call failed after {attempts} retry attempt(s).` Got Erro`r: {err}",
+  "NETWORK_CALL_FAILURE_AFTER_MAX_RETRIES": "Network call for {apiName} failed after {attempts} retry attempt(s). Got Error: {err}",
+
+  "INVALID_RETRY_CONFIG": "Retry config is invalid. Should be of type:object",
+  
   "SDK_INIT_EVENT_FAILED": "Error occurred while sending SDK init event. Error:{err}",
+  
   "INVALID_NETWORK_RESPONSE_DATA": "Received invalid or empty response data from the network request",
-  "ALIAS_NOT_ENABLED" : "Aliasing is not enabled. Set isAliasingEnabled in init to enable aliasing",
+  "ALIAS_CALLED_BUT_NOT_PASSED" : "Aliasing is not enabled. Set isAliasingEnabled:true in init to enable",
 
-  "SET_SEGMENTATION_CONTEXT_ERROR": "Error in setting contextual data for segmentation. Got error: {err}",
+  "ERROR_SETTING_SEGMENTATION_CONTEXT": "Error in setting contextual data for segmentation. Error: {err}",
   "USER_AGENT_VALIDATION_ERROR": "Failed to validate user agent. Error: {err}",
-  "LOCATION_PRE_SEGMENT_REQUIRED_ERROR": "To evaluate location pre Segment, please pass ipAddress in context object",
-  "USER_AGENT_PRE_SEGMENT_REQUIRED_ERROR": "To evaluate user agent pre Segment, please pass userAgent in context object",
-  "INVALID_INIT_FORMAT": "Invalid inList operand format",
-  "GATEWAY_DATA_FETCH_ERROR": "Error while fetching data from gateway. Error: {err}",
+  "INVALID_IP_ADDRESS_IN_CONTEXT_FOR_PRE_SEGMENTATION": "ipAddress is required in context to evaluate location pre-segmentation",
+  "INVALID_USER_AGENT_IN_CONTEXT_FOR_PRE_SEGMENTATION": "userAgent is required in context to evaluate user-agent pre-segmentation",
+  "INVALID_ATTRIBUTE_LIST_FORMAT": "Invalid inList operand format",
+  "ERROR_FETCHING_DATA_FROM_GATEWAY": "Error while fetching data from gateway. Error: {err}",
 
-  "STORAGE_READ_ERROR": "Error while reading from storage. Error: {err}",
-  "STORAGE_WRITE_ERROR": "Error while writing to storage. Error: {err}",
+  "INVALID_BATCH_EVENTS_CONFIG": "Invalid batch events config. Should be an object - eventsPerRequest and requestTimeInterval should be of type:number and > 0",
 
-  "DECODE_SDK_KEY_ERROR": "Failed to decode sdkKey from storage. Error: {err}",
-  "INVALID_BATCH_EVENTS_CONFIG": "Invalid batch events config, should be an object, eventsPerRequest should be a number greater than 0 and requestTimeInterval should be a number greater than 0",
-
-  "ATTRIBUTES_MAP_ERROR": "Attributes map must contain atleast 1 key-value pair",
-  "ATTRIBUTES_MAP_INVALID": "Attributes should be an object containing key-value pairs",
-
-  "BATCHING_NOT_ENABLED": "Batching is not enabled. Pass batchEventData in the SDK configuration while invoking init API.",
-  "NETWORK_CALL_FAILURE_AFTER_MAX_RETRIES_FOR_V2_SETTINGS": "Network call to {endPoint} failed after {attempts} retry attempt(s). Error: {err}",
-  "NETWORK_CALL_FAILURE_AFTER_MAX_RETRIES_FOR_GET_FLAG": "Network call having experimentId:{experimentId}, variationId:{variationId} failed after {attempts} retry attempt(s). Got Error: {err}",
-  "NETWORK_CALL_FAILURE_AFTER_MAX_RETRIES": "Network call for {apiName} failed after {attempts} retry attempt(s). Got Error: {err}"
+  "BATCHING_NOT_ENABLED": "Batching is not enabled. Pass batchEventData in the SDK configuration while invoking init API."
 }
