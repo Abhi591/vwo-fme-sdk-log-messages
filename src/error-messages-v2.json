@@ -29,7 +29,7 @@
 
   "INVALID_GATEWAY_URL": "Invalid URL for VWO Gateway Service while initializing the SDK",
 
-  "NETWORK_CALL_FAILED": "Error occurred while sending {method} request. Error:{err}",
+  "NETWORK_CALL_FAILED": "Error occurred while sending {endPoint} request. Error:{err}",
   "ATTEMPTING_RETRY_FOR_FAILED_NETWORK_CALL": "Request failed for {endPoint}. Error: {err}. Retrying in {delay} seconds, attempt {attempt} of {maxRetries}",
 
   "NETWORK_CALL_FAILURE_AFTER_MAX_RETRIES": "Network call for {extraData} failed after {attempts} retry attempt(s). Got Error: {err}",
@@ -50,5 +50,6 @@
 
   "INVALID_BATCH_EVENTS_CONFIG": "Invalid batch events config. Should be an object - eventsPerRequest and requestTimeInterval should be of type:number and > 0",
 
-  "BATCHING_NOT_ENABLED": "Batching is not enabled. Pass batchEventData in the SDK configuration while invoking init API."
+  "BATCHING_NOT_ENABLED": "Batching is not enabled. Pass batchEventData in the SDK configuration while invoking init API.",
+  "BATCH_QUEUE_RESTORE_FAILED": "Failed to restore events to front of queue. Error: {err}, Queue length: {queueLength}"
 }
